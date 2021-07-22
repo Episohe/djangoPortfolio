@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>코스토랑</title>
+    <title>포트폴리오</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static 'menus/css/detail_styles.css' %}">
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
@@ -12,7 +12,7 @@
         <div class="container">
             <div class="nav">
                 <a href="/menus">
-                    <img src="{% static 'menus/images/logo-color.svg' %}">
+                    <img src="{% static 'menus/images/logo-color.png' %}">
                 </a> 
         </div>
     </div>
@@ -26,10 +26,10 @@
                     <img src={%get_static_prefix%}{{menu.img_path}}>
                 </div>
                 <div class="menu_info">
-                    <h3>{{menu.name}}</h3>
-                    <h4>{{menu.name_eng}}</h4>
+                    <h3>{{menu.title}}</h3>
+                    <h4>{{menu.stack}}</h4>
                     <p class="menu-desc">{{menu.description}}</p>
-                    <p class="price">&#8361;{{menu.price}}</p>
+                    <p class="price"><a href={{menu.url }}><img src="{% static 'menus/images/github.png' %}"/></a>Click icon button</p>
                 </div>
                 <div class="back-main">
                     <a href="/menus">돌아가기</a>
@@ -40,7 +40,7 @@
     <div id="footer">
         <div class="container">
             <div class="footer">
-                <img src="{% static 'menus/images/logo-gray.svg' %}">
+
             </div>
         </div>
     </div>
